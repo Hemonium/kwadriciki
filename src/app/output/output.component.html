@@ -1,0 +1,10 @@
+<div>
+    <div>
+        <label for="name">Wpisz angielskie nazwy kolorów oddzielone spacjami: </label>
+        <input id="name" [(ngModel)]="kolor.kolorWartosc" placeholder="red green blue">
+      </div>
+    <div *ngFor="let kolorOne of test(kolor.kolorWartosc)" [style.background-color]="kolorOne">
+        {{kolorOne | uppercase}}
+    </div>
+    
+</div>
