@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component,Input, inject } from '@angular/core';
 import { PrzeslijService } from '../przeslij.service';
 import { Kolor } from '../kolorek';
 
@@ -9,11 +9,9 @@ import { Kolor } from '../kolorek';
 })
 
 export class OutputComponent {
-  kolor: Kolor = {
-    kolorWartosc: 'red',
-    otoczony: false
-  };
-  test(item: string){
-    return item.split(' ')
+  kolorWartosc?: string
+  test(item:string){
+      return item.split(' ')
+    
   };
 }
